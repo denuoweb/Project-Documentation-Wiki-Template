@@ -5,39 +5,15 @@ This repository is a **template** for course wiki documentation.
 - **Start here (Wiki):** https://github.com/denuoweb/Project-Documentation-Wiki-Template/wiki
 - The Wiki is the single source of truth for project documentation.
 - This repo exists to make the wiki content easy to clone and reuse.
+- If the destination wiki does not exist yet, create it by adding a single page in the GitHub UI first.
 
-## Option A: Clone the template repo (includes wiki as a submodule)
-```bash
-git clone --recurse-submodules https://github.com/denuoweb/Project-Documentation-Wiki-Template.git
-```
+## Seed a new project's wiki (keeps history)
+Use this to preserve the template wiki history and make it your project's wiki history.
 
-## Option B: Clone just the wiki (copy into a new project)
-```bash
-git clone https://github.com/denuoweb/Project-Documentation-Wiki-Template.wiki.git wiki
-rm -rf wiki/.git
-```
-
-## Option C: Seed a new project's wiki (keeps history)
 ```bash
 git clone https://github.com/denuoweb/Project-Documentation-Wiki-Template.wiki.git wiki
 cd wiki
 git remote set-url origin https://github.com/<org>/<new-project>.wiki.git
 git push -u origin <default-branch>
 ```
-Most GitHub wikis still default to `master`; replace as needed.
 
-## After editing wiki pages: update the submodule pointer (Option A only)
-
-The GitHub Wiki is a separate git repository. The `wiki/` directory in this repo is a **submodule** pointing to a specific wiki commit. If you edit the wiki (in the GitHub UI or by pushing to the wiki repo), the main repo’s submodule pointer will **not** automatically update.
-
-To bump the submodule pointer in the main repo:
-
-```bash
-cd Project-Documentation-Wiki-Template/wiki
-git pull
-
-cd ..
-git add wiki
-git commit -m "Update wiki submodule pointer"
-git push
-```
