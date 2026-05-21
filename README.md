@@ -19,3 +19,10 @@ git remote set-url origin https://github.com/<org>/<new-project>.wiki.git
 git push -u origin <default-branch>
 ```
 
+## Portfolio Case Study
+
+This repository is part of Jaron Rosenau's implementation, developer-support, and integration engineering portfolio. The public case study summarizes the problem, delivery scope, architecture, and operational result.
+
+- Case study: [Project Documentation Wiki Template case study](https://rosenau.info/projects/jw4B8HQM27mv5Nb95vA1)
+- Full portfolio: [Jaron Rosenau](https://rosenau.info)
+- Summary: Reusable documentation workflow for GitHub wiki projects and contributor-facing handoff.
